@@ -9,10 +9,9 @@ class EmbeddingPipeline {
   static model = 'Xenova/all-MiniLM-L6-v2';
   static instance = null;
 
-  static async getInstance(progressCallback = null) {
+  static async getInstance() {
     if (this.instance === null) {
-      this.instance =
-        pipeline(`${this.task}`, `${this.model}`, {progressCallback});
+      this.instance = pipeline(`${this.task}`, `${this.model}`);
     }
     return this.instance;
   }
@@ -24,8 +23,6 @@ const MainContainer = () => {
   const [input1, setInput1] = useState('This is a happy person');
   const [input2, setInput2] = useState('This is a happy person');
   const [output, setOutput] = useState('');
-
-  let extractor = null;
 
   const dotProduct = (a, b) => {
     if (a.length !== b.length) {
@@ -44,11 +41,7 @@ const MainContainer = () => {
   const calculateSimilarity = async () => {
     setDisabled(true);
 
-    if (extractor === null) {
-      extractor = await EmbeddingPipeline.getInstance((x) => {
-        self.postMessage(x);
-      });
-    }
+    const extractor = await EmbeddingPipeline.getInstance();
 
     const output1 = extractor(input1, {pooling: 'mean', normalize: true})
         .then((response) => console.log(response));
