@@ -1,0 +1,7 @@
+{
+    "notebook.codeActionsOnSave": {},
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "files.eol": "auto"
+}

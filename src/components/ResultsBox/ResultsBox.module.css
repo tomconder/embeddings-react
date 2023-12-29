@@ -1,0 +1,8 @@
+  .output {
+      padding: 20px 52px 20px 20px;
+      margin: 20px 100px 10px 100px;
+      height: auto;
+      min-width: 600px;
+      font-size: calc(1.6vmin);
+      text-align: center;
+  }

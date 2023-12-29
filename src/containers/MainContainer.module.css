@@ -1,0 +1,11 @@
+.inputs textarea {
+    padding: 20px 52px 20px 20px;
+    margin: 10px;
+    height: auto;
+    min-height: 288px;
+    min-width: 600px;
+    font-size: calc(1.6vmin);
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px #000;
+    border: 5px solid transparent;
+  }
