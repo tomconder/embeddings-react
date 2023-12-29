@@ -2,7 +2,8 @@ import {useState} from 'react';
 import CalculateButton from '../components/CalculateButton/CalculateButton';
 import ResultsBox from '../components/ResultsBox/ResultsBox';
 import styles from './MainContainer.module.css';
-import {pipeline} from '@xenova/transformers';
+import {env, pipeline} from '@xenova/transformers';
+
 
 class EmbeddingPipeline {
   static task = 'feature-extraction';
@@ -18,6 +19,10 @@ class EmbeddingPipeline {
 }
 
 const MainContainer = () => {
+  env.localModelPath = process.env.PUBLIC_URL + '/models/';
+  env.allowLocalModels = false;
+  env.useBrowserCache = false;
+
   const [disabled, setDisabled] = useState(false);
 
   const [input1, setInput1] = useState('This is a happy person');
@@ -43,8 +48,7 @@ const MainContainer = () => {
 
     const extractor = await EmbeddingPipeline.getInstance();
 
-    const output1 = extractor(input1, {pooling: 'mean', normalize: true})
-        .then((response) => console.log(response));
+    const output1 = await extractor(input1, {pooling: 'mean', normalize: true});
     const output2 = await extractor(input2, {pooling: 'mean', normalize: true});
 
     const output = dotProduct(output1.data, output2.data);
