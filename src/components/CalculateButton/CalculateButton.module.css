@@ -1,8 +1,8 @@
-  
-  .calculate {
+
+.calculate {
     padding: 20px 52px 20px 20px;
     margin: 10px;
     text-align: center;
     font-size: calc(1.6vmin);
     min-width: 400px;
-  }
+}

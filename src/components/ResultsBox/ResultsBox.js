@@ -3,7 +3,7 @@ import styles from './ResultsBox.module.css';
 
 const ResultsBox = ({children}) => (
   <div className={styles.output}>
-    { children }
+    {children}
   </div>
 );
 

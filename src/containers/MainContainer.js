@@ -73,8 +73,8 @@ const MainContainer = () => {
         </textarea>
       </div>
 
-      <CalculateButton disabled={disabled} onClick={calculateSimilarity} />
-      <ResultsBox>{ output }</ResultsBox>
+      <CalculateButton disabled={disabled} onClick={calculateSimilarity}/>
+      <ResultsBox>{output}</ResultsBox>
     </>
   );
 };

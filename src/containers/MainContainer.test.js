@@ -5,7 +5,7 @@ describe('<MainContainer />', () => {
   let component;
 
   beforeEach(() => {
-    component = shallow(<MainContainer />);
+    component = shallow(<MainContainer/>);
   });
 
   test('It should mount', () => {

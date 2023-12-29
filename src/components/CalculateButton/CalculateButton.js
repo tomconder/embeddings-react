@@ -1,8 +1,8 @@
 import styles from './CalculateButton.module.css';
 
 const CalculateButton = (props) => (
-  <button id="generate-button" className={styles.calculate} { ...props }>
-  Calculate Similarity
+  <button id="generate-button" className={styles.calculate} {...props}>
+        Calculate Similarity
   </button>
 );
 
