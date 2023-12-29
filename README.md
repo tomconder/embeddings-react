@@ -2,7 +2,7 @@
 
 A web app that uses [Transformers.js](https://huggingface.co/docs/transformers.js/index) to compare the similarity between two sentences or paragraphs.
 
-![screenshot](../docs/../embeddings-react/docs/genembeddings.png "Screenshot")
+![screenshot](docs\genembeddings.png)
 
 ## Installing
 
