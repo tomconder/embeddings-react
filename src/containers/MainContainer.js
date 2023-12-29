@@ -86,9 +86,15 @@ const MainContainer = () => {
       <h1>Generate embeddings in the browser</h1>
 
       <div className={styles.inputs}>
-        <textarea id="input1" onChange={(x) => setInput1(x.target.value)}>
+        <textarea
+          value={input1}
+          id="input1"
+          onChange={(x) => setInput1(x.target.value)}>
         </textarea>
-        <textarea id="input2" onChange={(x) => setInput2(x.target.value)}>
+        <textarea
+          value={input2}
+          id="input2"
+          onChange={(x) => setInput2(x.target.value)}>
         </textarea>
       </div>
 

@@ -7,7 +7,8 @@ class EmbeddingPipeline {
 
   static async getInstance(progressCallback = null) {
     if (this.instance === null) {
-      this.instance = pipeline(task, model, {progressCallback});
+      this.instance =
+        pipeline(`${this.task}`, `${this.model}`, {progressCallback});
     }
     return this.instance;
   }
